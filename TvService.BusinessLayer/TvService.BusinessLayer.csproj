@@ -41,12 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICustomerService.cs" />
+    <Compile Include="Abstract\IDeviceService.cs" />
+    <Compile Include="Abstract\IServiceRecordService.cs" />
+    <Compile Include="Abstract\ITechnicianService.cs" />
+    <Compile Include="Manager\CustomerManager.cs" />
+    <Compile Include="Manager\DeviceManager.cs" />
+    <Compile Include="Manager\ServiceRecordManager.cs" />
+    <Compile Include="Manager\TechnicianManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TvService.DataAccessLayer\TvService.DataAccessLayer.csproj">
       <Project>{a240b199-97fd-4f6e-b8c6-9469181432e2}</Project>
       <Name>TvService.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TvService.EntityLayer\TvService.EntityLayer.csproj">
+      <Project>{c831683f-e69a-4a34-ae90-8fc3b04996d6}</Project>
+      <Name>TvService.EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
